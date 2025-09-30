@@ -1,4 +1,4 @@
-# GeoFS Addon Menu and Manager Documentation
+# GeoFS Addon Menu Documentation
 
 An all-in-one repository for the GeoFS addon menu, GeoFS addon manager and related scripts.
 > The `addonMenu.js` script is injected into the page and provides an API for creating a settings menu for addons.
