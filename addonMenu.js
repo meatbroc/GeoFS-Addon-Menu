@@ -17,9 +17,9 @@
             if (AddonMenu.#instance) return AddonMenu.#instance;
             AddonMenu.#instance = this;
             this.debugging = !1;
-            window.executeOnEventDone("geofsInitialized", this.init());
+            window.executeOnEventDone("geofsInitialized", this.#init());
         }
-        init() { // uses jQuery because jQuery is just better
+        #init() { // uses jQuery because jQuery is just better
             this.$button = $("<div/>", {class: "mdl-button mdl-js-button geofs-f-standard-ui"})
                 .attr({
                     id: "addonMenuButton",
