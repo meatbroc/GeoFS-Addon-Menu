@@ -5,9 +5,7 @@ An all-in-one repository for the GeoFS addon menu, GeoFS addon manager and relat
 
 # Initial Setup
 
-Paste the code below into your script(s) or use the entire extension
-
-(see: [loading an unpacked extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked))
+Paste the code below into your script(s).
 
 ```javascript
 if (!window.AddonMenu) {
