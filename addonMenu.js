@@ -50,6 +50,9 @@
             if (type === "checkbox" && typeof defaultVal !== "boolean") return console.error("checkbox default values can only be true or false"), !1;
             return geofs.preferences.aMenu[name] = geofs.preferencesDefault.aMenu[name] = defaultVal, true;
         }
+        getPreference(name) {
+            return geofs.preferences.aMenu[name];
+        }
         #setPreferenceValues = function() {
             $(this.$menu).find("[data-gespref]").each( (e, a) => {
                 var o = $(a)
