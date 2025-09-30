@@ -44,7 +44,7 @@ is what I used for my Taxiway Lights addon.
 
 To add to the addon menu, you must first initialise a window.AddonMenuItem class instance.
 
-### Class: window.AddonMenuItem
+## Class: window.AddonMenuItem
 
 *Every method in this class returns its 'this' property, allowing for method chaining like so: `new AddonMenuItem('exampleID').addHeader('example', 1).addToMenu()`*
 
@@ -101,6 +101,23 @@ const myItem = new window.AddonMenuItem("coolItem", {class: "epic-item-styles"})
    	  ```js
    	  myItem.addInput('foo', 'bar', 'baz').addToMenu(); // run it last
    	  ```
+
+## Class Instance: window.AddonMenu
+
+Description: Singleton instance that holds the actual addon menu div and associated methods. Has most of the helper functions for the addonMenuItems
+
+### Methods:
+- addSupportedInputType
+	- Params:
+		- e: String. Valid type of an HTMLInputElement.
+  		- t: Function. Callback function to be executed on init to initialise preference setting.
+    - Note: This function cannot only be run once. If you want to support a type of input, it must be run at runtime by a script every time.
+    - Example:
+      ```js
+      AddonMenu.addSupportedInputType("email", (a, o, n, c) => console.log(a, o, n, c));
+      ```
+- getPreference
+	- 
 ## Getting values
 
 To get values, use geofs.preferences.aMenu. A function may be added for this later to make it more robust.
